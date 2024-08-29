@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
+import {CxSideNavigationModule} from '@fundamental-ngx/cx/side-navigation';
+import {CxNestedListModule} from '@fundamental-ngx/cx/nested-list';
+import {NgTemplateOutlet} from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CxSideNavigationModule, CxNestedListModule, NgTemplateOutlet, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'fdx-side-nav-bug';
 }
