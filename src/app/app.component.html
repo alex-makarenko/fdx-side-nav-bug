@@ -3,7 +3,7 @@
     <ul fdx-nested-list>
       <ng-container *ngTemplateOutlet="templateListItem"></ng-container>
       <li fdx-nested-list-item>
-        <a fdx-nested-list-link>
+        <a fdx-nested-list-link [routerLink]="['/list-item']" routerLinkActive="is-selected">
           <span fdx-nested-list-icon [glyph]="'example'"></span>
           <span fdx-nested-list-title>List Item</span>
         </a>
@@ -16,7 +16,7 @@
         </button>
         <ul fdx-nested-list>
           <li fdx-nested-list-item >
-            <a fdx-nested-list-link>
+            <a fdx-nested-list-link [routerLink]="['/nested-list-item']" routerLinkActive="is-selected">
               <span fdx-nested-list-title>Nested List Item</span>
             </a>
           </li>
@@ -29,6 +29,8 @@
 <ng-template #templateListItem>
   <li fdx-nested-list-item>
     <a fdx-nested-list-link
+       [routerLink]="['/template-list-item']"
+       routerLinkActive="is-selected"
     >
       <span fdx-nested-list-icon glyph="home"></span>
       <span fdx-nested-list-title>Template List Item</span>
